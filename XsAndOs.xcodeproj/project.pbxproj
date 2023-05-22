@@ -12,6 +12,7 @@
 		D74DD5E62A1815F600695B87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D74DD5E52A1815F600695B87 /* Assets.xcassets */; };
 		D74DD5E92A1815F600695B87 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D74DD5E82A1815F600695B87 /* Preview Assets.xcassets */; };
 		D74DD5F02A181B0600695B87 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D74DD5EF2A181B0600695B87 /* Launch Screen.storyboard */; };
+		D74DD5F32A1AD8B600695B87 /* GameModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74DD5F22A1AD8B600695B87 /* GameModels.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		D74DD5E52A1815F600695B87 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D74DD5E82A1815F600695B87 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D74DD5EF2A181B0600695B87 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		D74DD5F22A1AD8B600695B87 /* GameModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModels.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 			children = (
 				D74DD5E12A1815F300695B87 /* AppEntry.swift */,
 				D74DD5E32A1815F300695B87 /* StartView.swift */,
+				D74DD5F12A1AD89700695B87 /* Models */,
 				D74DD5E52A1815F600695B87 /* Assets.xcassets */,
 				D74DD5EF2A181B0600695B87 /* Launch Screen.storyboard */,
 				D74DD5E72A1815F600695B87 /* Preview Content */,
@@ -68,6 +71,14 @@
 				D74DD5E82A1815F600695B87 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D74DD5F12A1AD89700695B87 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D74DD5F22A1AD8B600695B87 /* GameModels.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,6 +153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D74DD5E42A1815F300695B87 /* StartView.swift in Sources */,
+				D74DD5F32A1AD8B600695B87 /* GameModels.swift in Sources */,
 				D74DD5E22A1815F300695B87 /* AppEntry.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
