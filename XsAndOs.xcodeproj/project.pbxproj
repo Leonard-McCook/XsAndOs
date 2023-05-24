@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D7488DA32A1E4D0000A556CA /* ViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7488DA22A1E4D0000A556CA /* ViewModifiers.swift */; };
 		D74DD5E22A1815F300695B87 /* AppEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74DD5E12A1815F300695B87 /* AppEntry.swift */; };
 		D74DD5E42A1815F300695B87 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74DD5E32A1815F300695B87 /* StartView.swift */; };
 		D74DD5E62A1815F600695B87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D74DD5E52A1815F600695B87 /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D7488DA22A1E4D0000A556CA /* ViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifiers.swift; sourceTree = "<group>"; };
 		D74DD5DE2A1815F300695B87 /* XsAndOs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XsAndOs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D74DD5E12A1815F300695B87 /* AppEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEntry.swift; sourceTree = "<group>"; };
 		D74DD5E32A1815F300695B87 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
@@ -36,6 +38,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D7488DA12A1E4C9C00A556CA /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				D7488DA22A1E4D0000A556CA /* ViewModifiers.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		D74DD5D52A1815F300695B87 = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +68,7 @@
 				D74DD5E12A1815F300695B87 /* AppEntry.swift */,
 				D74DD5E32A1815F300695B87 /* StartView.swift */,
 				D74DD5F12A1AD89700695B87 /* Models */,
+				D7488DA12A1E4C9C00A556CA /* Utilities */,
 				D74DD5E52A1815F600695B87 /* Assets.xcassets */,
 				D74DD5EF2A181B0600695B87 /* Launch Screen.storyboard */,
 				D74DD5E72A1815F600695B87 /* Preview Content */,
@@ -155,6 +166,7 @@
 				D74DD5E42A1815F300695B87 /* StartView.swift in Sources */,
 				D74DD5F32A1AD8B600695B87 /* GameModels.swift in Sources */,
 				D74DD5E22A1815F300695B87 /* AppEntry.swift in Sources */,
+				D7488DA32A1E4D0000A556CA /* ViewModifiers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
