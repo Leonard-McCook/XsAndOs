@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct StartView: View {
+    @EnvironmentObject var game: GameService
     @State private var gameType: GameType = .undetermined
     @State private var yourName = ""
     @State private var opponentName = ""
@@ -17,9 +18,9 @@ struct StartView: View {
             VStack {
                 Picker("Select Game", selection: $gameType) {
                     Text("Select Game Type").tag(GameType.undetermined)
-                    Text("Two Sharing Device").tag(GameType.single)
-                    Text("Challenge Your Device").tag(GameType.bot)
-                    Text("Challenge a Friend").tag(GameType.peer)
+                    Text("Two Sharing device").tag(GameType.single)
+                    Text("Challenge your device").tag(GameType.bot)
+                    Text("Challenge a friend").tag(GameType.peer)
                 }
                 .padding()
                 .background(RoundedRectangle(cornerRadius: 10, style: .continuous).stroke(lineWidth: 2))
@@ -46,6 +47,7 @@ struct StartView: View {
                 .frame(width: 350)
                 if gameType != .peer {
                     Button("Start Game") {
+                        game.setupGame(gameType: gameType, player1Name: yourName, player2Name: opponentName)
                         focus = false
                         startGame.toggle()
                     }
@@ -72,5 +74,6 @@ struct StartView: View {
 struct StartView_Previews: PreviewProvider {
     static var previews: some View {
         StartView()
+            .environmentObject(GameService())
     }
 }
