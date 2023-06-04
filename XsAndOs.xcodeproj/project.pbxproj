@@ -19,6 +19,7 @@
 		D74DD5F02A181B0600695B87 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D74DD5EF2A181B0600695B87 /* Launch Screen.storyboard */; };
 		D74DD5F32A1AD8B600695B87 /* GameModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74DD5F22A1AD8B600695B87 /* GameModels.swift */; };
 		D753431E2A2A4980001D7EDF /* YourNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D753431D2A2A4980001D7EDF /* YourNameView.swift */; };
+		D75DB19C2A2CD07400DBD848 /* MPConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75DB19B2A2CD07400DBD848 /* MPConnectionManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		D74DD5F22A1AD8B600695B87 /* GameModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModels.swift; sourceTree = "<group>"; };
 		D753431D2A2A4980001D7EDF /* YourNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourNameView.swift; sourceTree = "<group>"; };
 		D75DB1992A2ACE6600DBD848 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		D75DB19B2A2CD07400DBD848 /* MPConnectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPConnectionManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 				D753431D2A2A4980001D7EDF /* YourNameView.swift */,
 				D74DD5E32A1815F300695B87 /* StartView.swift */,
 				D7488DA42A200EE200A556CA /* Game Screen */,
+				D75DB19A2A2CCF2D00DBD848 /* MultiPeerConnectivity */,
 				D74DD5F12A1AD89700695B87 /* Models */,
 				D7488DA12A1E4C9C00A556CA /* Utilities */,
 				D74DD5E52A1815F600695B87 /* Assets.xcassets */,
@@ -115,6 +118,14 @@
 				D74DD5F22A1AD8B600695B87 /* GameModels.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		D75DB19A2A2CCF2D00DBD848 /* MultiPeerConnectivity */ = {
+			isa = PBXGroup;
+			children = (
+				D75DB19B2A2CD07400DBD848 /* MPConnectionManager.swift */,
+			);
+			path = MultiPeerConnectivity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,6 +205,7 @@
 				D74DD5E22A1815F300695B87 /* AppEntry.swift in Sources */,
 				D7488DA82A235AEF00A556CA /* GameService.swift in Sources */,
 				D7488DA32A1E4D0000A556CA /* ViewModifiers.swift in Sources */,
+				D75DB19C2A2CD07400DBD848 /* MPConnectionManager.swift in Sources */,
 				D7488DA62A200F0800A556CA /* GameView.swift in Sources */,
 				D7488DAA2A25650C00A556CA /* GameSquare.swift in Sources */,
 				D7488DAC2A264A4500A556CA /* SquareView.swift in Sources */,
