@@ -72,6 +72,8 @@ class MPConnectionManager: NSObject, ObservableObject {
         availablePeers.removeAll()
     }
     
+    
+    
     func send(gameMove: MPGameMove) {
         if !session.connectedPeers.isEmpty {
             do {
