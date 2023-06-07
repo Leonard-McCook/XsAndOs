@@ -9,6 +9,7 @@ import SwiftUI
 
 struct GameView: View {
     @EnvironmentObject var game: GameService
+    @EnvironmentObject var connectionManager: MPConnectionManager
     @Environment(\.dismiss) var dismiss
     var body: some View {
         VStack {
@@ -87,6 +88,9 @@ struct GameView: View {
         .navigationTitle("Xs and Os")
         .onAppear {
             game.reset()
+            if game.gameType == .peer {
+                connectionManager.setup(game: game)
+            }
         }
         .inNavigationStack()
     }
@@ -96,6 +100,7 @@ struct GameView_Previews: PreviewProvider {
     static var previews: some View {
         GameView()
             .environmentObject(GameService())
+            .environmentObject(MPConnectionManager(yourName: "Sample"))
     }
 }
 
@@ -111,4 +116,3 @@ struct PlayerButtonStyle: ButtonStyle {
         
     }
 }
-
