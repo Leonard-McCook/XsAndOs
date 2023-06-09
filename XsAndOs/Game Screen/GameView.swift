@@ -19,6 +19,10 @@ struct GameView: View {
             HStack {
                 Button(game.player1.name) {
                     game.player1.isCurrent = true
+                    if game.gameType == .peer {
+                        let gameMove = MPGameMove(action: .start, playrName: game.player1.name, index: nil)
+                        connectionManager.send(gameMove: gameMove)
+                    }
                 }
                 .buttonStyle(PlayerButtonStyle(player: game.player1))
                 Button(game.player2.name) {
@@ -27,6 +31,10 @@ struct GameView: View {
                         Task {
                             await game.deviceMove()
                         }
+                    }
+                    if game.gameType == .peer {
+                        let gameMove = MPGameMove(action: .start, playrName: game.player2.name, index: nil)
+                        connectionManager.send(gameMove: gameMove)
                     }
                 }
                 .buttonStyle(PlayerButtonStyle(player: game.player2))
@@ -59,7 +67,9 @@ struct GameView: View {
                     }
                 }
             }
-            .disabled(game.boardDisabled)
+            .disabled(game.boardDisabled ||
+                      game.gameType == .peer &&
+                      connectionManager.myPeerId.displayName != game.currentPlayer.name)
             VStack {
                 if game.gameOver {
                     Text("Game Over")
@@ -70,6 +80,10 @@ struct GameView: View {
                     }
                     Button("New Game") {
                         game.reset()
+                        if game.gameType == .peer {
+                            let gameMove = MPGameMove(action: .reset, playrName: nil, index: nil)
+                            connectionManager.send(gameMove: gameMove)
+                        }
                     }
                     .buttonStyle(.borderedProminent)
                 }
@@ -81,6 +95,10 @@ struct GameView: View {
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button("End Game") {
                     dismiss()
+                    if game.gameType == .peer {
+                        let gameMove = MPGameMove(action: .end, playrName: nil, index: nil)
+                        connectionManager.send(gameMove: gameMove)
+                    }
                 }
                 .buttonStyle(.bordered)
             }
@@ -116,3 +134,5 @@ struct PlayerButtonStyle: ButtonStyle {
         
     }
 }
+
+

@@ -40,7 +40,8 @@ struct StartView: View {
                     case .bot:
                         EmptyView()
                     case .peer:
-                        EmptyView()
+                        MPPeersView(startGame: $startGame)
+                            .environmentObject(connectionManager)
                     case .undetermined:
                         EmptyView()
                     }
@@ -61,6 +62,9 @@ struct StartView: View {
                         gameType == .single && opponentName.isEmpty
                     )
                     Image("LaunchScreen")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 200)
                     Text("Your name is \(yourName)")
                     Button("Change my name") {
                         changeName.toggle()
@@ -95,4 +99,3 @@ struct StartView_Previews: PreviewProvider {
             .environmentObject(GameService())
     }
 }
-

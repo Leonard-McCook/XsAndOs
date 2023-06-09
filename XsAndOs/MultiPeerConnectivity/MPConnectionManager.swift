@@ -138,7 +138,7 @@ extension MPConnectionManager: MCSessionDelegate {
             DispatchQueue.main.async {
                 switch gameMove.action {
                 case .start:
-                    guard let playerName = gameMove.playerName else { return }
+                    guard let playerName = gameMove.playrName else { return }
                     if self.game?.player1.name == playerName {
                         self.game?.player1.isCurrent = true
                     } else {

@@ -67,4 +67,3 @@ struct MPPeersView_Previews: PreviewProvider {
             .environmentObject(GameService())
     }
 }
-

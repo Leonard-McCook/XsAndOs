@@ -27,4 +27,3 @@ extension View {
         return self.modifier(NavStackContainer())
     }
 }
- 
